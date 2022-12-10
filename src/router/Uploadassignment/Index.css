@@ -1,0 +1,82 @@
+.uploaadassignment {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+}
+
+.uploaadassignment .button-area {
+  display: flex;
+  margin-top: 20px;
+}
+
+.uploaadassignment .button-area div {
+  margin-right: 20px;
+  color: gray;
+}
+
+.uploaadassignment .button-area div span {
+  font-size: 1.8rem;
+}
+
+.arrow {
+  margin-left: 18.51px;
+  margin-top: 70.73px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.yourmom {
+  display: flex;
+}
+
+.box {
+  border-radius: 6px;
+  width: 100%;
+  height: 150px;
+  left: 29px;
+  top: 180px;
+  background: #f4f4f5;
+  border: 0.1px solid #c2c2c2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 33px;
+  color: #8d94a0;
+  margin-top: 10px;
+  margin-left: 29px;
+  padding: 7px;
+  backdrop-filter: blur(2px);
+}
+
+.gangbang {
+  font-family: ".SF Arabic";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 20px;
+  color: #000000;
+  margin-left: 29px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.header-ahffk .right-pupple p {
+  color: #724be1;
+  margin-top: 0;
+  margin-left: auto;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tittle1 {
+  font-family: ".SF Arabic";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-left: 148.3px;
+}

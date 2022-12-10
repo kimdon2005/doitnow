@@ -1,0 +1,51 @@
+.Arrow {
+  width: 12px;
+  height: 20.92px;
+  margin-top: 66px;
+  margin-left: 9px;
+  margin-bottom: 130px;
+}
+
+.schoolchoosing {
+  margin-left: 30px;
+}
+
+.firstbox {
+  font-style: normal;
+  font-weight: 532;
+  font-size: 24px;
+  position: absoulte;
+  font-family: .SF Arabic;
+  line-height: 31px;
+  font-variation-settings: "opsz" 28;
+  margin-bottom: 47px;
+}
+
+.secondbox {
+  width: 80px;
+  height: 20px;
+  left: 29px;
+  top: 251px;
+
+  font-family: "Alef";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.schoolsearchinG {
+  width: 100%;
+  border-bottom: 3px solid #724be1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 19px;
+  padding: 5px;
+  margin-top: 5px;
+  padding-right: 31px;
+}
+
+.schoolchoosing .firstbox span {
+  color: #724be1;
+}

@@ -1,0 +1,83 @@
+.Notipage {
+  width: 100%;
+  height: 100vh;
+  padding: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Notipage .innernoti {
+  max-width: 500px;
+  flex: 1;
+}
+.button {
+  margin-top: 70.73px;
+}
+
+.tittle {
+  margin-top: 37.72px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 32px;
+}
+
+.subtittle {
+  margin-top: 12px;
+  font-family: ".SF Compact";
+  font-style: normal;
+  font-weight: 656;
+  font-size: 17px;
+  line-height: 20px;
+  color: #999cab;
+}
+
+.ring {
+  margin: 50px;
+  text-align: center;
+}
+
+.writing {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.writing1 {
+  margin-top: 14px;
+  margin-bottom: 24px;
+  font-family: ".SF Compact";
+  font-style: normal;
+  font-weight: 656;
+  font-size: 17px;
+  line-height: 20px;
+  color: #999cab;
+}
+
+.fixednotice {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  padding: 20px;
+}
+.notice {
+  background: #724be1;
+  border-radius: 10px;
+  color: white;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  padding: 15px;
+}
+
+.ring img {
+  width: 110px;
+  margin-left: 123px;
+}

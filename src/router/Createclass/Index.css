@@ -1,0 +1,99 @@
+.createclass {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background: #f2f4f6;
+}
+.createclass .class_contents {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.createclass .title {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.createclass .menu {
+  display: flex;
+  color: gray;
+}
+.createclass .menu p {
+  margin-right: 25px;
+}
+.createclass .menu .black {
+  color: black;
+}
+#explore {
+  background-color: black;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  margin-top: 4px;
+}
+.class_type_area {
+  width: 100%;
+  margin-top: 20px;
+}
+.class_type {
+  width: 100%;
+  padding: 30px;
+  border-radius: 25px;
+  background: #5aa469;
+  color: white;
+}
+
+.class_type .title {
+  margin: 0;
+}
+.class_type .subtitle {
+  margin-top: 5px;
+}
+.class_type .figure {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.class_type .figure .left {
+  flex: 1;
+  margin-right: 10px;
+}
+.class_type .figure .right {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.whitebox1 {
+  width: 100%;
+  height: 50px;
+  background: #bedbbb;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.whitebox2 {
+  width: 100%;
+  height: 80px;
+  background: #bedbbb;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.whitebox3 {
+  width: 100%;
+  height: 80px;
+  background: #bedbbb;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.whitebox4 {
+  width: 100%;
+  height: 50px;
+  background: #bedbbb;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

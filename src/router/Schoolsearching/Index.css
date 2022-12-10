@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  background: #F2F4F6;
+}
+.schoolsearching {
+  padding: 30px;
+  width: 100%;
+  height: 100vh;
+  background: #f2f4f6;
+  overflow: hidden;
+}
+.canwestudy {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.canwestudy div {
+  flex: 1;
+}
+.img {
+  position: relative;
+  margin-top: 30px;
+}
+.book-img {
+  width: 250px;
+  position: absolute;
+}
+.purple-circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(
+    180deg,
+    #efdfff 0%,
+    rgba(243, 237, 250, 0) 92.99%
+  );
+  border-radius: 50%;
+}
+.canwestudy .title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.canwestudy .title span {
+  color: #724be1;
+}
+
+.canwestudy .subtitle {
+  color: gray;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0px;
+}
+
+.shadow-box {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 17px;
+  margin-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.school-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.school-info p {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+.go-icon img {
+  width: 27px;
+  display: block;
+  margin-top: -2px;
+}
+
+.school-list {
+  display: flex;
+  margin-top: 15px;
+}
+.school-list .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: gray;
+  margin-right: 10px;
+}
+
+.school-list .info p {
+  margin: 0;
+}
+
+.school-list .info .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.school-list .info .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: gray;
+  margin-bottom: 0;
+}

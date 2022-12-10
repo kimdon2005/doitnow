@@ -1,0 +1,72 @@
+.homework-feed {
+  padding: 45px 10px 10px 10px;
+  column-width: 13em;
+  column-gap: 0.5em;
+  width: 100%;
+}
+
+.homework-card {
+  color: black;
+  background: white;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.profile-info {
+  display: flex;
+}
+.profile-info > .img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  margin-right: 7px;
+}
+.profile-info > .nickname {
+  font-size: 0.85rem;
+  margin: 0;
+}
+.homework-card > .title {
+  font-size: 1rem;
+  margin: 5px 0 5px 0;
+}
+.homework-card > .contents {
+  font-size: 1rem;
+  margin: 7px 0 5px 0;
+}
+
+.fixed-button {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.fixed-button > button {
+  color: white;
+  background: black;
+  border-radius: 50%;
+  padding: 5px 12px;
+  font-size: 1.4rem;
+  margin: 10px 150px 10px 10px;
+  margin: 10px;
+}
+
+.login-form {
+  padding: 45px 10px 10px 10px;
+}
+
+@media (max-width: 675px) {
+  .homework-feed {
+    column-width: 8em;
+    column-gap: 0.5em;
+  }
+  .header-left > .title {
+    width: 150px;
+  }
+}
