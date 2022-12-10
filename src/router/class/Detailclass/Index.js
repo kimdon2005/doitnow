@@ -1,12 +1,12 @@
 import "./Index.css";
-// import axios from "axios";
-
+import axios from "axios";
 const Detailclass = () => {
   const info = {
     school_id: "2075",
     grade: "1",
     class: "5"
   };
+  axios.get('/api/page/class?school_id=2075&grade=1&class=5').then(response => console.log(response))
   /*
   axios
     .put("/api/page/posting", info, { withCredentials: true })
