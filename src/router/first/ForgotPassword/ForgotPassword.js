@@ -1,4 +1,4 @@
-import Header from "../../components/Navigation/Index";
+import Header from "../../../components/Navigation/Index";
 import "./ForgotPassword.css";
 
 const ForgotPassword = () => {

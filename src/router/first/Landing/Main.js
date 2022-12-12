@@ -1,9 +1,32 @@
 import React from "react";
 import "./Main.css";
-import Header from "../../components/Header/Header";
-import { Link } from "react-router-dom";
+import Header from "../../../components/Header/Header";
+import { Link , useNavigate} from "react-router-dom";
+import 'firebase/firestore';
+import 'firebase/auth';
+import { signInWithGoogle, auth } from '../../config/firebase_config';
+
+function GoogleSignin(props){
+
+  auth.onAuthStateChanged(user => {
+  // user.currentUser 를 통해 현재 로그인 중인 사용자에 대한 정보를 이용할 수 있습니다.
+  // ex) user.currentUser.email , user.currentUser.displayName .. etc
+  
+    if(user !== null){
+      console.log('로그인되었습니다.');
+      props("/my");
+    }
+  })
+
+  return (
+    <div>
+      <button onClick={()=>signInWithGoogle().then(props("/my"))}>로그인</button>
+    </div>
+  )
+}
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <img
@@ -20,13 +43,9 @@ const Main = () => {
           </p>
         </div>
         <div className="bottom">
-          <button className="button-kakao">
-            <img src="https://t1.daumcdn.net/cfile/tistory/2315BC3453D9F98F03" />
-            카카오로 시작하기
-          </button>
-          <button className="button-apple">
-            <img src="https://pnggrid.com/wp-content/uploads/2021/04/white-apple-1670x2048.png" />
-            Apple로 시작하기
+          <button className="button-kakao" onClick={()=>GoogleSignin(navigate)}>
+            <img src="img/pngwing.com.png" />
+            구글로 시작하기
           </button>
           <Link to="/signup">
             <p className="another-way">다른 방법으로 시작하기</p>

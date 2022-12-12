@@ -1,5 +1,5 @@
 import "./Index.css";
-import Navigation from "../../components/Navigation/Index";
+import Navigation from "../../../components/Navigation/Index";
 
 const Mypage = () => {
   return (
@@ -60,7 +60,7 @@ const Mypage = () => {
           <p>로그아웃</p>
         </div>
       </div>
-      <Navigation />
+      <Navigation my ='color_selected' />
     </div>
   );
 };

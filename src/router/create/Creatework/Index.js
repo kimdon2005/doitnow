@@ -1,5 +1,5 @@
 import "./Index.css";
-import Navigation from "../../components/Navigation/Index";
+import Navigation from "../../../components/Navigation/Index";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 

@@ -28,6 +28,7 @@
   font-size: 2.4rem;
 }
 .top p span {
+  color: #FAE100;
   font-weight: bold;
 }
 
@@ -54,7 +55,7 @@
   padding: 15px 10px;
   display: flex;
   justify-content: center;
-  background: #f7e600;
+  background: white;
 }
 .button-kakao img {
   width: 20px;
