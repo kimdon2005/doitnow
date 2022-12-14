@@ -24,9 +24,14 @@ body {
   position: relative;
   margin-top: 30px;
 }
+
 .book-img {
-  width: 250px;
+  height: 190px;
+  width: 150px;
+  bottom: 2px;
+  left: 10px;
   position: absolute;
+
 }
 .purple-circle {
   position: absolute;

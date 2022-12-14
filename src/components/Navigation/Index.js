@@ -9,7 +9,6 @@ const Navigation = (props) => {
   let make = props.make;
   let join = props.join;
   let my = props.my;  
-  console.log(class_);
   return (
     <div className="navigation">
       <div className="">
@@ -30,15 +29,18 @@ const Navigation = (props) => {
       </div>
 
       <div className="">
+        <Link to="/joining" style={{ textDecoration: 'none' }}>
         <span className="material-symbols-outlined" id={(join == null) ? '': 'color_selected'}>Link</span>
-        <Link to="/joining">
           <p id={(join == null) ? '': 'color_selected'}>합류하기</p>
         </Link>
       </div>
 
       <div className="">
+        <Link to="/my" style={{ textDecoration: 'none' }}>
         <span className="material-symbols-outlined" id={(my == null) ? '': 'color_selected'}>person</span>
         <p id={(my == null) ? '': 'color_selected'}>MY</p>
+        </Link>
+
       </div>
     </div>
   );

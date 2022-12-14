@@ -1,41 +1,11 @@
 import "./Index.css";
 import axios from "axios";
-const Detailclass = () => {
-  const info = {
-    school_id: "2075",
-    grade: "1",
-    class: "5"
-  };
-  axios.get('/api/page/class?school_id=2075&grade=1&class=5').then(response => console.log(response))
-  /*
-  axios
-    .put("/api/page/posting", info, { withCredentials: true })
-    .then((response) => {
-      console.log(response.data);
-    });
-    */
-  /*
-  fetch("https://www.doitnow.kr/api/page/class", {
-    method: "PATCH",
-    headers: {
-      "Content-type": "application/json"
-    },
-    body: JSON.stringify({
-      idPosting: 14,
-      idStudent: 1202,
-      title: "test33",
-      content: "fuck"
-    })
-  })
-    // .then(response => console.log("response"))
-    .then((res) => {
-      if (res.success) {
-        // console.log(`${res.user.name}` 님 환영합니다);
-        console.log(res);
-      }
-    });
-    */
+import   Backbutton from "../../../components/backbutton/backbutton"
+import { useNavigate} from "react-router";
 
+const Detailclass = () => {
+  axios.get('/api/page/class?school_id=2075&grade=1&class=5').then(response => console.log(response))
+  const navigate = useNavigate();
   function LoginUser() {
     const requestOptions = {
       method: "PATCH",
@@ -65,9 +35,8 @@ const Detailclass = () => {
   return (
     <div className="detailclass">
       <div className="header-ahffk">
-        <div className="back-icon">
-          <img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/arrow_back_ios_new/default/48px.svg" />
-        </div>
+      <Backbutton navigate = {navigate}></Backbutton>
+
         <div className="title"></div>
         <div></div>
       </div>

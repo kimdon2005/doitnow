@@ -22,18 +22,15 @@ import Createclassinfo from "./router/create/Createclassinfo/Index";
 import Uploadassignment from "./router/homework/Uploadassignment/Index";
 import Createpost from "./router/homework/Createpost/Index";
 import Comment from "./router/homework/Comment/Index";
+import Classchoosing from "./router/welcome/Classchoosing/Index";
 const AppRouter = ({ isLoggedIn }) => {
   return (
     <BrowserRouter>
       <Routes>
-        {(isLoggedIn === true) ? (
-          <>
-            <Route path="/" element={<Mypage isLoggedIn={isLoggedIn} />} />
-          </>
-        ) : (
+
           <>
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<Main islogin = {isLoggedIn} />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/schoolsearching" element={<Schoolsearching />} />
             <Route path="/schoolchoosing" element={<Schoolchoosing />} />
@@ -50,10 +47,12 @@ const AppRouter = ({ isLoggedIn }) => {
             <Route path="/Uploadassignment" element={<Uploadassignment />} />
             <Route path="/createclassinfo" element={<Createclassinfo />} />
             <Route path="/comment" element={<Comment />} />
+            <Route path="/classchoosing" element={<Classchoosing />} />
+            
             {/* <Route path="/pagelink" element={<Pagelink />} /> */}
             <Route path="/createpost" element={<Createpost />} />
           </>
-        )}
+        
         <Route
           path="/room/:roomId"
           element={<Room isLoggedIn={isLoggedIn} />}

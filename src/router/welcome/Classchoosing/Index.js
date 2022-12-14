@@ -20,7 +20,7 @@ const Classchoosing = () => {
           <div className="purple-circle"></div>
           <img
             className="book-img"
-            src="https://cdn.discordapp.com/attachments/1000698294709792838/1028574121061261433/9f2dcd3b632fd12f.png"
+            src="img/book.png"
           />
         </div>
       </div>

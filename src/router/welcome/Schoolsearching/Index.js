@@ -1,9 +1,15 @@
 import "./Index.css";
 import Navigation from "../../../components/Navigation/Index";
+import { useNavigate, useLocation} from "react-router-dom";
+import   Backbutton from "../../../components/backbutton/backbutton"
 
 const Schoolsearching = () => {
+  const { state } = useLocation();
+  const navigate = useNavigate();
   return (
     <div className="schoolsearching">
+            <Backbutton navigate = {navigate}></Backbutton>
+
       <div className="canwestudy">
         <div>
           <p className="title">
@@ -21,7 +27,8 @@ const Schoolsearching = () => {
           <div className="purple-circle"></div>
           <img
             className="book-img"
-            src="https://cdn.discordapp.com/attachments/1000698294709792838/1028574121061261433/9f2dcd3b632fd12f.png"
+            src="img/book.png"
+            alt ='book'
           />
         </div>
       </div>
@@ -30,7 +37,7 @@ const Schoolsearching = () => {
         <div className="school-info">
           <p>학교</p>
           <div className="go-icon">
-            <img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsrounded/chevron_right/default/48px.svg" />
+            <img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsrounded/chevron_right/default/48px.svg"  onClick={() => navigate('/schoolchoosing', { state: state})}/>
           </div>
         </div>
         <div className="school-list">

@@ -25,13 +25,16 @@ function GoogleSignin(props){
   )
 }
 
-const Main = () => {
+const Main = (props) => {
   const navigate = useNavigate();
+  if (props.islogin == true){
+    navigate("/my")
+  }
   return (
     <div>
       <img
         className="bg-img"
-        src="https://cdn.discordapp.com/attachments/1000698294709792838/1028672622680084581/pexels-ivan-samkov-4240584.jpg"
+        src="img/pexels-ivan-samkov-4240584.jpg"
       ></img>
       <div className="bg-shadow"></div>
       <div className="contents">

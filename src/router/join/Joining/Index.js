@@ -8,7 +8,7 @@ const Schoolsearching = () => {
 
       <div className="firstbox">QR 코드로 합류하기</div>
       <div className="secondbox">링크로 합류하기</div>
-      <Navigation />
+      <Navigation join ='selected' />
     </div>
   );
 };
