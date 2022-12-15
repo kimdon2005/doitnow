@@ -1,0 +1,67 @@
+.writingwork {
+  padding: 53px 20px 20px 20px;
+  width: 100%;
+  background: #f7f8f9;
+}
+
+.workinfo {
+  width: 100%;
+  padding: 10px;
+  background: #937dc2;
+  border: 0;
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.worktitle {
+  margin-top: 1.2rem;
+  font-family: ".SF Compact Rounded";
+  font-style: normal;
+  font-weight: 650;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.workexplanation {
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.datevalue {
+  margin-left: 6.5rem;
+  width: 203px;
+  font-family: ".SF Compact Rounded";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.workinfo .date {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bottombar {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  background-color: mediumturquoise;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
