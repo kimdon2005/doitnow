@@ -23,6 +23,10 @@ import Uploadassignment from "./router/homework/Uploadassignment/Index";
 import Createpost from "./router/homework/Createpost/Index";
 import Comment from "./router/homework/Comment/Index";
 import Classchoosing from "./router/welcome/Classchoosing/Index";
+import Calendar from "./router/homework/Calendar/Index";
+import Setting from "./router/my/Setting/Index";
+import Writingwork from "./router/homework/Writingwork/Index";
+
 const AppRouter = ({ isLoggedIn }) => {
   return (
     <BrowserRouter>
@@ -48,6 +52,10 @@ const AppRouter = ({ isLoggedIn }) => {
             <Route path="/createclassinfo" element={<Createclassinfo />} />
             <Route path="/comment" element={<Comment />} />
             <Route path="/classchoosing" element={<Classchoosing />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/setting" element={<Setting />} />
+            <Route path="/writingwork" element={<Writingwork />} />
+
             
             {/* <Route path="/pagelink" element={<Pagelink />} /> */}
             <Route path="/createpost" element={<Createpost />} />
