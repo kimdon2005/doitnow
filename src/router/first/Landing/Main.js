@@ -16,13 +16,10 @@ function GoogleSignin(props){
       console.log('로그인되었습니다.');
       props("/my");
     }
+    else{
+      signInWithGoogle().then(props("/schoolsearching"))
+    }
   })
-
-  return (
-    <div>
-      <button onClick={()=>signInWithGoogle().then(props("/my"))}>로그인</button>
-    </div>
-  )
 }
 
 const Main = (props) => {

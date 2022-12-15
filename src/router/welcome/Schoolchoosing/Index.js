@@ -61,7 +61,7 @@ const Schoolchoosing = () => {
         <div>
           {
             search.map(search => {
-              return <button className = 'search' key = {search.idSchool} onClick = {()=>gotoNext(search.idSchool)}>{search.nameSchool + search.idSchool}</button>
+              return <div className = 'search' key = {search.idSchool} onClick = {()=>gotoNext(search.idSchool)}>{search.nameSchool}</div>
             })
           }
         </div>

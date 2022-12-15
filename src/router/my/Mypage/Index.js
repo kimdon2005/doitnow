@@ -1,7 +1,20 @@
 import "./Index.css";
 import Navigation from "../../../components/Navigation/Index";
+import { useNavigate} from "react-router";
+import { getAuth, signOut} from "firebase/auth";
 
 const Mypage = () => {
+  const navigate = useNavigate();
+
+  const logout=()=>{
+    const auth = getAuth();
+    
+    signOut(auth).then(() => {
+      navigate('/')
+      }).catch((error) => {
+    });
+
+}
   return (
     <div>
       <div className="header-ahffk">
@@ -56,7 +69,7 @@ const Mypage = () => {
           <p>공지사항</p>
           <span class="material-symbols-outlined">navigate_next</span>
         </div>
-        <div className="a">
+        <div className="a" onClick={logout}>
           <p>로그아웃</p>
         </div>
       </div>

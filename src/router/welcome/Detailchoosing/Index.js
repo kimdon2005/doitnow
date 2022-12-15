@@ -56,6 +56,7 @@ const Detailchoosing = (props) => {
               makeSignUp(state.email, password, idClass, num).then(
                 ()=>{
                   console.log('회원가입 성공!');
+                  navigate('/my');
                 }
               )
             }
@@ -74,6 +75,7 @@ const Detailchoosing = (props) => {
           makeSignUp(state.email, password, idClass, num).then(
             ()=>{
               console.log('회원가입 성공!');
+              navigate('/my');
             }
           )
         }
