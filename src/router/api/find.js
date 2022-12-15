@@ -36,15 +36,7 @@ var findclassid = function (idSchool, grade, class_) {
 
 const createClass = (idSchool, grade, class_) =>{
     return new Promise(function (resolve, reject) {
-        let obj = {
-            "school_id":idSchool,
-            "grade":grade,
-            "class":class_
-        }
-        axios.post('/api/page/class', JSON.stringify(obj),{
-            withCredentials: true
-    
-        }).then(response =>{
+        axios.post('/api/page/class?school_id=' +idSchool+'&grade='+grade+'&class='+class_).then(response =>{
             resolve(response.data)
         }).catch(error=>{
             console.error(error);
@@ -69,9 +61,7 @@ const makeSignUp = (email, password, idClass, num)=>{
                     "nickname": "행복한 나우"
                 }
                 console.log(JSON.stringify(obj))
-                axios.post('/api/auth/signup', JSON.stringify(obj),{
-                    withCredentials: true
-                })
+                axios.post('/api/auth/signup?uid=' + user.uid + '&idClass='+ idClass+'&idStudent='+num+'&nickname=행복한나우')
                 .then(
                     ()=>{
                         resolve();
@@ -88,5 +78,7 @@ const makeSignUp = (email, password, idClass, num)=>{
 
     })
 }
+
+
 
 export {findClassId, createClass, findclassid,makeSignUp};
