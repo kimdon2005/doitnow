@@ -1,0 +1,15 @@
+@font-face {
+    /* 사용할 폰트의 이름 */
+    font-family: "Arabic";
+    font-display: fallback;
+  
+    /* 
+       Modern Browsers => woff
+       IE6-IE8 => eot
+    */
+    src: url("./SF-Arabic-font.ttf") format("truetype");
+  
+    /* 사용할 폰트의 기본 스타일 */
+    font-weight: 400;
+    font-style: normal;
+  }

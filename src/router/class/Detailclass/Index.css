@@ -1,0 +1,53 @@
+.detailclass {
+  width: 100%;
+  height: 100vh;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 60px 50px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+.boxing {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(224, 224, 224, 0.7);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.boxing p {
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 10px;
+}
+.boxing span {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-left: 10px;
+}
+.vovo {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f2f3f5;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.vovo p {
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 10px;
+}
+.vovo span {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.enterbutton {
+  border-radius: 15px;
+  color: #724be1cc;
+  border-color: white;
+  background-color: white;
+  float: right;
+}

@@ -1,0 +1,69 @@
+.Detailchoosing {
+  margin-top: 142px;
+  margin-left: 30px;
+}
+
+.BBackArRow {
+  width: 12px;
+  height: 20.92px;
+  margin-top: 66px;
+  margin-left: 9px;
+}
+
+.FiRsT {
+  font-style: normal;
+  font-weight: 532;
+  font-size: 24px;
+  position: absoulte;
+  font-family: "Arabic";;
+  line-height: 31px;
+  font-variation-settings: "opsz" 28;
+  margin-bottom: 70px;
+}
+
+.Detailchoosing .FiRsT span {
+  color: #724be1;
+}
+
+.BOx1 {
+  margin-bottom: 40px;
+}
+.BOx2 {
+  margin-bottom: 40px;
+}
+.BOx3 {
+}
+
+.FonT1 {
+  font-family: Alef;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.SeARcHingBAR {
+  width: 100%;
+  border-bottom: 3px solid #724be1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 19px;
+  padding: 9px;
+}
+
+.confire{
+  position: relative;
+  width: 100%;
+  top: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  border-color: #724be1;
+  background-color: #724be1;
+  color:white;
+  font-family: "Arabic";
+  font-weight: bolder;
+  cursor: pointer;
+}
+.confire :hover{
+  box-shadow: 10px 10px 20px black;
+}

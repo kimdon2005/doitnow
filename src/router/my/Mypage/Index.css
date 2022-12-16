@@ -1,0 +1,91 @@
+.mypage {
+  margin: 60px 20px 20px 20px;
+}
+.header-ahffk {
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  background: #714be1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* background: #efefef; */
+}
+
+.header-ahffk div {
+  flex: 1;
+  margin: 15px;
+}
+
+.header-ahffk .back-icon img {
+  width: 20px;
+}
+.header-ahffk .title {
+  color: #f2f4f6;
+  text-align: center;
+  font-weight: bold;
+}
+.profile-info .profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0;
+  margin-right: 20px;
+}
+.profile-info .Name {
+  color: #000000;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+.profile-info .profile-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-info .Name {
+  font-size: 1.5rem;
+  margin-top: 0;
+  width: 100%;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile-info .class {
+  color: gray;
+  margin: 0;
+}
+
+.profile-info .tool {
+  margin: 0 0 0 auto;
+  padding-top: 13px;
+}
+.gray-box {
+  width: 100%;
+  height: 17px;
+  background: #f2f4f6;
+}
+.parent {
+  width: 100%;
+  margin: 10px auto;
+}
+.parent .a {
+  font-weight: 500;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  line-height: 24px;
+}
+.a p {
+  margin: 0;
+}
+.a span {
+  margin: 0 0 0 auto;
+}

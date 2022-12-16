@@ -1,0 +1,108 @@
+.login {
+  bottom: 100px;
+  margin-top: -30px;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  
+}
+
+.login input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 0px 20px;
+  color: black;
+  font-size: 1rem;
+  background: #efefef;
+  margin-bottom: 4px;
+  border-style: hidden;
+}
+.login_etc {
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.email_p, .pw_p {
+  margin-bottom: 15px;
+  font-family: "Arabic";
+  font-weight: 600;
+}
+.pw_p {
+  margin-top: 35px;
+}
+.submit {
+  margin-top: 50px;
+  width: 80%;
+}
+.submit_button {
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: #efefef;
+  color: black;
+  font-size: 1rem;
+}
+
+
+.checkbox_area {
+  margin : 0;
+}
+
+.forget {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 0.9rem;
+}
+
+.left-icon {
+  left: 85.97%;
+  right: 11.54%;
+  top: 69.39%;
+  bottom: 28.69%;
+  
+  background: #CED2D8;
+}
+
+.header-ahffk {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #efefef;
+}
+
+.header-ahffk div {
+  flex: 1;
+  margin: 15px;
+}
+
+.header-ahffk .back-icon img {
+  width: 20px;
+}
+.header-ahffk .title {
+  text-align: center;
+  font-weight: bold;
+}
+form {
+  padding-top: 100px;
+  /* 생략 */
+}
+
+.App{
+  text-align: left;
+}
+
+.noti{
+  font-size: smaller;
+  margin-top: 3px;
+}
