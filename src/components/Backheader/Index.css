@@ -1,0 +1,21 @@
+.header-ahffk {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header-ahffk div {
+  flex: 1;
+  margin: 15px;
+}
+
+.header-ahffk .back-icon span {
+  font-size: 1.2rem;
+}
+.header-ahffk .title {
+  text-align: center;
+  font-weight: bold;
+}
