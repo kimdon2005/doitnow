@@ -1,0 +1,44 @@
+.classpage-header {
+  width: 100%;
+  // height: auto;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background: #ffffff;
+  padding: 15px 15px 11px 15px;
+  display: flex;
+  background: #f7f8f9;
+  z-index: 9999;
+}
+
+.classpage-header div {
+  div: 1;
+}
+
+.classpage-header .left {
+  display: flex;
+}
+
+.classpage-header .left span {
+  font-size: 1.25rem;
+  margin-right: 20px;
+}
+.classpage-header .left .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.classpage-header .right {
+  margin-left: auto;
+}
+
+.classpage-header .right span {
+  margin-left: 20px;
+  color: gray;
+}
+
+.classpage-header .right .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
