@@ -1,4 +1,5 @@
 import "./Index.css";
+import Titleheader from "components/Titleheader/Index";
 
 const Writingwork = () => {
   const cardList = [
@@ -21,11 +22,17 @@ const Writingwork = () => {
         "https://pbs.twimg.com/media/FZ4Ad-FakAAnwqa?format=jpg&name=360x360",
       mainImgUrl:
         "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2D9/image/GUi7Tl3TQkKZmkR3sRj4si5fMeI.jpg",
-      title: "수달은 귀엽다",
+      title: "수달은 코가 크다",
       mainText: "수달은 귀엽다 반박시 니말 다틀림",
       date: "100일전"
     }
   ];
+
+  const data = {
+    title: "환상적인 제목",
+    content: "돔황챠",
+    date: "마음껏"
+  };
 
   const Viewcard = ({ info }) => {
     return (
@@ -65,34 +72,14 @@ const Writingwork = () => {
 
   return (
     <div className="writingwork">
-      <div className="classpage-header">
-        <div className="left">
-          <span class="material-symbols-outlined">arrow_back_ios_new</span>
-        </div>
-        <div className="right">
-          <span className="material-symbols-outlined">search</span>
-          <span className="material-symbols-outlined">settings</span>
-        </div>
-      </div>
+      <Titleheader title="" />
       <div className="workinfo">
         <div className="worktitle">영어 프린트 수행평가</div>
-        <div className="workexplanation">
-          2-1학습지
-          <br />
-          2-2학습지
-          <br />
-          2-2러닝로그
-          <br />
-          2-3학습지
-          <br />
-          2-3러닝로그
-          <br />
-          2-4학습지
-        </div>
+        <div className="workexplanation">{data.content}</div>
         <p className="date">기한 :2022-07-08 ~ 2022-07-28</p>
       </div>
       <Printcard />
-      <div className="bottombar">hghnghj</div>
+      <div className="bottombar">2-6반</div>
     </div>
   );
 };
