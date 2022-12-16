@@ -1,5 +1,5 @@
 import "./Index.css";
-import Titleheader from "components/Titleheader/Index";
+import Titleheader from "../../../components/Titleheader/Index";
 
 const Writingwork = () => {
   const cardList = [
