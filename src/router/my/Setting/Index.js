@@ -1,5 +1,5 @@
 import "./Index.css";
-import Backheader from "components/Backheader/Index";
+import Backheader from "../../../components/Backheader/Index";
 
 const Setting = () => {
   return (
