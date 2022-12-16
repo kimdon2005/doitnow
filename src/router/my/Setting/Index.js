@@ -1,15 +1,11 @@
 import "./Index.css";
+import Backheader from "components/Backheader/Index";
 
 const Setting = () => {
   return (
     <div>
       <div className="Setting">
-        <div className="header-ahffk">
-          <div className="back-icon">
-            <img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/arrow_back_ios_new/default/48px.svg" />
-          </div>
-        </div>
-        <div className="Settingtitle">설정</div>
+        <Backheader title="설정" />
         <div className="parent">
           <div className="a">
             <p>나의 활동 내역</p>
