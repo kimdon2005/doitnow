@@ -2,10 +2,14 @@ import "./Index.css";
 import Navigation from "../../../components/Navigation/Index";
 import { useNavigate} from "react-router";
 import { getAuth, signOut} from "firebase/auth";
+import { useState , useEffect} from "react";
+import axios from "axios";
+
+
 
 const Mypage = () => {
   const navigate = useNavigate();
-
+  const [info, setInfo] = useState({});
   const logout=()=>{
     const auth = getAuth();
     
@@ -13,8 +17,28 @@ const Mypage = () => {
       navigate('/')
       }).catch((error) => {
     });
+  }
+  useEffect(() => {
+    axios.get('/api/user').then((result)=>{
+      console.log(result.data)
+      return result.data;
+    }).then(
+      (data)=>{
+        setInfo(data);
+      }
+    )
+  },[]);
 
-}
+  // const getinfo=() =>{
+  //   return new Promise(
+  //     (resolve)=>{
+  //       axios.get('/api/user').then((result)=>{
+  //         resolve();
+  //         return result.json;
+  //       })
+  //     }    
+  //   )
+  // }
   return (
     <div>
       <div className="header-ahffk">
@@ -27,13 +51,13 @@ const Mypage = () => {
           <div>
             <img
               className="profile"
-              src="https://cdn.discordapp.com/attachments/1000698294709792838/1028684804796973186/dog-g076e8c51c_640.jpg"
+              src= {info.filepath ? info.filepath : 'img/basic.jpg'}
             />
           </div>
           <div className="profile-user">
             <div>
-              <p className="Name">장현빈</p>
-              <p className="class">마산용마고등학교 2학년 6반</p>
+              <p className="Name">{info.nickname}</p>
+              <p className="class">{info.nameSchool}</p>
             </div>
           </div>
           <div className="tool">
@@ -77,5 +101,7 @@ const Mypage = () => {
     </div>
   );
 };
+
+
 
 export default Mypage;
