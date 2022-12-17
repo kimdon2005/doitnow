@@ -1,5 +1,5 @@
 import "./Index.css";
-import Titleheader from "../../../components/Titleheader/Index";
+import Titleheader from "components/Titleheader/Index";
 
 const Writingwork = () => {
   const cardList = [
@@ -79,7 +79,21 @@ const Writingwork = () => {
         <p className="date">기한 :2022-07-08 ~ 2022-07-28</p>
       </div>
       <Printcard />
-      <div className="bottombar">2-6반</div>
+      <div className="bottombar">
+        <div>
+          <span class="material-symbols-outlined">
+            ios_share
+          </span>
+        </div>
+        <div>
+          <span class="material-symbols-outlined">
+            notifications
+          </span>
+        </div>
+        <div>d</div>
+        <div>d</div>
+        <div>d</div>
+      </div>
     </div>
   );
 };
