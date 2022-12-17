@@ -84,7 +84,7 @@ const Detailchoosing = (props) => {
   }
   return (
     <div>
-      <Backbutton navigate = {navigate}></Backbutton>
+      <Backbutton></Backbutton>
       <div className="Detailchoosing">
         <div className="FiRsT">
           재학 중이신 <br />

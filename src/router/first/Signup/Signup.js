@@ -61,7 +61,7 @@ const Login = () => {
     <div>
       <div className="header-ahffk">
         <div className="back-icon">
-          <Backbutton navigate = {navigate}></Backbutton>
+          <Backbutton></Backbutton>
 
         </div>
         <div className="title">회원가입</div>

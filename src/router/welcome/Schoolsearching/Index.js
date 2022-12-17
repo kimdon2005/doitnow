@@ -8,7 +8,7 @@ const Schoolsearching = () => {
   const navigate = useNavigate();
   return (
     <div className="schoolsearching">
-            <Backbutton navigate = {navigate}></Backbutton>
+            <Backbutton></Backbutton>
 
       <div className="canwestudy">
         <div>

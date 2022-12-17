@@ -1,7 +1,9 @@
 import "./Index.css";
 import { AiOutlineLeft } from "react-icons/ai";
-const Backbutton = (props) =>{
-    let navigate = props.navigate;
+import { useNavigate} from "react-router-dom";
+
+const Backbutton = () =>{
+    const navigate = useNavigate();
     return(
     <div className="backbutton" onClick={() => navigate(-1) }>
         <AiOutlineLeft>
