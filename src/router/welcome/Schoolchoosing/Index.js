@@ -40,7 +40,7 @@ const Schoolchoosing = () => {
 
   return (
     <div>
-      <Backbutton navigate = {navigate}></Backbutton>
+      <Backbutton></Backbutton>
       <div className="Arrow"></div>
       <div className="schoolchoosing">
         <div className="firstbox1">
