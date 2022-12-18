@@ -13,13 +13,13 @@
 
 .Creatework .menu {
   display: flex;
-  color: gray;
+  color: black;
 }
 .Creatework .menu p {
   margin-right: 25px;
 }
 .Creatework .menu .black {
-  color: black;
+  color: gray;
 }
 .BlueBoX {
   margin-top: 41px;

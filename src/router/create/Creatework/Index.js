@@ -13,8 +13,12 @@ const Creatework = () => {
       <div className="Creatework">
         <p className="title">만들기</p>
         <div className="menu">
-          <p className="black">클래스 만들기</p>
-          <p>과제 만들기<span id="explore"></span>
+        <Link to='/createclass' style={{ textDecoration: 'none' }}>
+        <p className="black">클래스 만들기</p>
+        </Link>
+
+          <p>
+            과제 만들기<span id="explore"></span>
           </p>
         </div>
         <div className="BlueBoX">
@@ -32,7 +36,7 @@ const Creatework = () => {
           />
         </div>
       </div>
-      <Navigation make= 'selected'/>
+      <Navigation make = 'selected'/>
     </div>
   );
 };

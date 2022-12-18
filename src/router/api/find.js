@@ -1,20 +1,7 @@
 import axios from "axios";
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../config/firebase_config'
-function findClassId(idSchool, grade, class_){
-    axios.post('/api/user/class?idSchool=' + idSchool + '&grade='+grade+'&class='+class_).then( reponse => {
-        // return new Promise(
-        //     (resolve)=>{
-        //         resolve(reponse.data);
-        //     })\
-        console.log(reponse.data)
-        return reponse.data
-        
-      })
-      .catch(error => {
-        console.error(error);
-      })
-}
+
 var findclassid = function (idSchool, grade, class_) {
     return new Promise(function (resolve, reject) {
 
@@ -82,6 +69,19 @@ const firebaseSignup = (email, password) =>{
     )
 }
 
+const findClassInfo =(idClass) =>{
+    return new Promise(
+        function(resolve,reject){
+            axios.get('/api/page/classinfo?id=' + idClass).then(
+                (result)=>{
+                    resolve(result)
+                }
+            )
+
+        }
+    )
+}
 
 
-export {findClassId, createClass, findclassid,makeSignUp , firebaseSignup};
+
+export { createClass, findclassid,makeSignUp , firebaseSignup, findClassInfo};

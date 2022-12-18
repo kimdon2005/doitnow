@@ -52,7 +52,7 @@ const Mypage = () => {
             </div>
           </div>
           <div className="tool">
-            <Link to='/setting'>
+            <Link to='/setting' style={{ textDecoration: 'none' }}>
             <div>
               <span className="material-symbols-outlined">settings</span>
             </div>
@@ -64,27 +64,39 @@ const Mypage = () => {
       <div className="parent">
         <div className="a">
           <p>나의 활동 내역</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }} className='icon'>
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a">
           <p>나의 클래스 관리하기</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }}>
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a">
           <p>나의 과제 관리하기</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }}>
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a">
           <p>자주 묻는 질문</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }}>          
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a">
           <p>1:1 문의</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }}>
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a">
           <p>공지사항</p>
+          <Link to="/preparing" style={{ textDecoration: 'none' }}>
           <span class="material-symbols-outlined">navigate_next</span>
+          </Link>
         </div>
         <div className="a" onClick={logout}>
           <p>로그아웃</p>
