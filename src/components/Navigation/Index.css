@@ -7,7 +7,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  border-top: 1px solid black;
+  border-top: 0.5px solid #1e1e1e;
   display: flex;
   flex-direction: row;
   background: white;

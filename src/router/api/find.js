@@ -1,6 +1,6 @@
 import axios from "axios";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from '../config/firebase_config'
 function findClassId(idSchool, grade, class_){
     axios.post('/api/user/class?idSchool=' + idSchool + '&grade='+grade+'&class='+class_).then( reponse => {
         // return new Promise(
@@ -45,40 +45,43 @@ const createClass = (idSchool, grade, class_) =>{
     });
 }
 
-const makeSignUp = (email, password, idClass, num)=>{
+const makeSignUp = (uid, idClass, num)=>{
     return new Promise(function (resolve, reject){
-        const auth = getAuth();
-        console.log(email);
-        console.log(password);
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                let obj = {
-                    "uid" : user.uid,
-                    "idClass": idClass,
-                    "idStudent": num,
-                    "nickname": "행복한 나우"
-                }
-                console.log(JSON.stringify(obj))
-                axios.post('/api/auth/signup?uid=' + user.uid + '&idClass='+ idClass+'&idStudent='+num+'&nickname=행복한나우')
-                .then(
-                    ()=>{
-                        resolve();
-                    }
-                ).catch((error)=>{
-                    reject(error);
-                })
-            })
-            .catch((error) => {
-                // const errorCode = error.code;
-                const errorMessage = error.message;
-                reject(errorMessage)
-            });
-
+    let obj = {
+        "uid" : uid,
+        "idClass": idClass,
+        "idStudent": num,
+        "nickname": "행복한 나우"
+    }
+    console.log(JSON.stringify(obj))
+    axios.post('/api/auth/signup?uid=' + uid + '&idClass='+ idClass+'&idStudent='+num+'&nickname=행복한나우')
+    .then(
+        ()=>{
+            resolve();
+        }
+    ).catch((error)=>{
+        reject(error);
     })
+           
+    })
+}
+
+const firebaseSignup = (email, password) =>{
+    return new Promise(
+        function (resolve, reject){
+            createUserWithEmailAndPassword(auth, email, password).then(
+                (userCredential)=>{
+                    const user = userCredential.user;
+                    resolve(user.uid);
+                }
+            ).catch((error)=>{
+                reject(error.message)
+            })
+
+        }
+    )
 }
 
 
 
-export {findClassId, createClass, findclassid,makeSignUp};
+export {findClassId, createClass, findclassid,makeSignUp , firebaseSignup};

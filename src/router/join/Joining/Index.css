@@ -18,6 +18,7 @@ body {
 }
 
 .firstbox {
+  color: black;
   font-weight: 600;
   font-size: 16px;
   width: 100%;
@@ -32,6 +33,7 @@ body {
 }
 
 .secondbox {
+  color: black;
   font-weight: 600;
   font-size: 16px;
   width: 100%;

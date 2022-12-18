@@ -1,14 +1,13 @@
 import "./Index.css";
 import React, { useState } from 'react'
 import axios from "axios";
-import { useNavigate , useLocation} from 'react-router';
+import { useNavigate} from 'react-router';
 import   Backbutton from "../../../components/backbutton/backbutton"
 
 const Schoolchoosing = () => {
   const [text, setText] = useState('')  
   const [search, setSearch] = useState([])
   const navigate = useNavigate();
-  const { state } = useLocation();
 
 
 
@@ -32,9 +31,7 @@ const Schoolchoosing = () => {
   };
 
   const gotoNext = (id) =>{
-    state.idSchool = id;
-    navigate('/detailchoosing', { state: state});
-    
+    navigate('/detailchoosing', { state: id });
   }
   
 

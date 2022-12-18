@@ -14,10 +14,10 @@ function GoogleSignin(props){
   
     if(user !== null){
       console.log('로그인되었습니다.');
-      props("/my");
+      props("/calendar");
     }
     else{
-      signInWithGoogle().then(props("/schoolsearching"))
+      signInWithGoogle().then(props("/findschool"))
     }
   })
 }

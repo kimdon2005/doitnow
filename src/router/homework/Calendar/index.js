@@ -1,7 +1,8 @@
 import "./Index.css";
-import Calendar from "./Calendar.js";
+import Calendar from "./Calendar";
 import { useState } from "react";
-import Navigation from "components/Navigation/Index";
+import Navigation from "../../../components/Navigation/Index";
+import { Link } from "react-router-dom";
 
 const Calender = () => {
   const [value, onChange] = useState(new Date());
@@ -49,7 +50,9 @@ const Calender = () => {
     return (
       <div>
         {toDoList.map((info) => (
-          <ViewList info={info} />
+          <Link to ='/writingwork' style={{ textDecoration: 'none' }}>
+              <ViewList info={info} />
+          </Link>
         ))}
       </div>
     );
@@ -60,14 +63,14 @@ const Calender = () => {
       <Calendar />
       <div className="rectangle-9">
         <div className="info">
-          <p className="title">오늘의 할일</p>
+          <p className="title">오늘의 할 일</p>
           <p className="today-date">27일 수요일</p>
         </div>
         <div className="list">
           <PrintList />
         </div>
       </div>
-      <Navigation />
+      <Navigation work= 'seleced' />
     </div>
   );
 };

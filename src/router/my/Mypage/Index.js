@@ -4,6 +4,7 @@ import { useNavigate} from "react-router";
 import { getAuth, signOut} from "firebase/auth";
 import { useState , useEffect} from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -29,16 +30,6 @@ const Mypage = () => {
     )
   },[]);
 
-  // const getinfo=() =>{
-  //   return new Promise(
-  //     (resolve)=>{
-  //       axios.get('/api/user').then((result)=>{
-  //         resolve();
-  //         return result.json;
-  //       })
-  //     }    
-  //   )
-  // }
   return (
     <div>
       <div className="header-ahffk">
@@ -57,13 +48,15 @@ const Mypage = () => {
           <div className="profile-user">
             <div>
               <p className="Name">{info.nickname}</p>
-              <p className="class">{info.nameSchool}</p>
+              <p className="class">{info.nameSchool+' ' + info.grade + '학년 ' + info.class+'반'}</p>
             </div>
           </div>
           <div className="tool">
+            <Link to='/setting'>
             <div>
               <span className="material-symbols-outlined">settings</span>
             </div>
+            </Link>
           </div>
         </div>
       </div>

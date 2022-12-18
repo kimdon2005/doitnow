@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./Signup.css";
 import "./Checkbox.css";
 import   Backbutton from "../../../components/backbutton/backbutton"
+import { firebaseSignup } from "../../api/find";
 
 
 const Login = () => {
@@ -28,8 +29,12 @@ const Login = () => {
    setInputs(nextInputs)
 }
   const gotoNext = () =>{
-    console.log(typeof inputs)
-    navigate('/schoolsearching' , { state: inputs})
+    navigate('/findschool')
+    firebaseSignup(inputs.email, inputs.password).then(
+      (uid)=>{
+        console.log(uid)
+      }
+    )
   }
   const isEmail = (email) => {
     const emailRegex =
@@ -51,12 +56,6 @@ const Login = () => {
 
 }
   
-
-  // const StyledLink = styled(Link)`
-  //   color: #2c7ee8;
-  //   text-decoration: none;
-  // `;
-
   return (
     <div>
       <div className="header-ahffk">
@@ -120,7 +119,7 @@ const Login = () => {
           </div>
 
           <button className="submit_button" disabled ={
-            ((isEmail(email)== true) && (password === repassword) && (check === 'true') )? false: true
+            ((isEmail(email)== true) && (password === repassword) && (check === 'true')&& (checkPassword(password)===true))? false: true
           } onClick = {gotoNext}
             >
             동의하고 가입하기

@@ -4,6 +4,8 @@ import { useState } from "react";
 
 import   Backbutton from "../../../components/backbutton/backbutton"
 import {findclassid, createClass, makeSignUp} from "../../api/find";
+import {auth} from '../../config/firebase_config'
+
 const Detailchoosing = (props) => {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -32,9 +34,8 @@ const Detailchoosing = (props) => {
     console.log(state)
     let grade = inputs.grade;
     let class_ = inputs.class_
-    let idSchool = state.idSchool
+    let idSchool = state
     let number = inputs.num
-    let password = state.password;
     let idClass
     idClass = findclassid(idSchool, grade, class_).then(
       (id)=>{
@@ -52,13 +53,24 @@ const Detailchoosing = (props) => {
                 countClass = '0' + countClass;
               }
               let num = grade + countClass+countNum;
-              console.log(password)
-              makeSignUp(state.email, password, idClass, num).then(
-                ()=>{
-                  console.log('회원가입 성공!');
-                  navigate('/my');
-                }
+              auth.onAuthStateChanged((user) => {
+                if (user) {
+                  // User is signed in, see docs for a list of available properties
+                  // https://firebase.google.com/docs/reference/js/firebase.User
+                var uid = user.uid;                  
+                
+                makeSignUp(uid, idClass, num).then(
+                  ()=>{
+                    console.log('회원가입 성공!');
+                    navigate('/calenda');
+                  }
               )
+                } else {
+                  // User is signed out
+                  // ...
+                }
+              });
+
             }
           )
         }else{
@@ -70,14 +82,25 @@ const Detailchoosing = (props) => {
           if(countClass.length === '1'){
             countClass = '0' + countClass;
           }
-          let num = grade + countClass+countNum;
-          console.log(password)
-          makeSignUp(state.email, password, idClass, num).then(
-            ()=>{
-              console.log('회원가입 성공!');
-              navigate('/my');
-            }
+          let num = grade + countClass+countNum;  
+
+          auth.onAuthStateChanged((user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+            var uid = user.uid;                  
+            
+            makeSignUp(uid, idClass, num).then(
+              ()=>{
+                console.log('회원가입 성공!');
+                navigate('/calendar');
+              }
           )
+            } else {
+              // User is signed out
+              // ...
+            }
+          });
         }
       } 
     )

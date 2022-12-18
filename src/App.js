@@ -1,6 +1,6 @@
 import './App.css';
 import AppRouter from "./router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { auth } from './router/config/firebase_config';
 
 function App() {

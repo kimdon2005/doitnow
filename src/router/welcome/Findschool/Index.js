@@ -37,7 +37,10 @@ const Schoolsearching = () => {
           <div className="school-info">
             <p>학교 찾기</p>
             <div className="go-icon">
+              <Link to='/schoolchoosing'>
               <img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsrounded/chevron_right/default/48px.svg" />
+
+              </Link>
             </div>
           </div>
           <div className="school-list">

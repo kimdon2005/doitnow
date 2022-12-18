@@ -12,20 +12,30 @@ const Navigation = (props) => {
   return (
     <div className="navigation">
       <div className="">
+        <Link to ="/preparing" style={{ textDecoration: 'none' }}>
         <span className="material-symbols-outlined" id={(class_ == null) ? '': 'color_selected'}>
           menu_book
         </span>
         <p id={class_ == null ? '': 'color_selected'}>클래스</p>
+        </Link>
+  
       </div>
 
       <div className="">
+      <Link to="/calendar" style={{ textDecoration: 'none' }}>
+
         <span className="material-symbols-outlined" id={(work == null) ? '': 'color_selected'} >calendar_month</span>
         <p id={(work == null) ? '': 'color_selected'}>과제</p>
+        </Link>
+
       </div>
 
       <div className="">
+        <Link to='/creatework' style={{ textDecoration: 'none' }}>
         <span className="material-symbols-outlined" id={(make == null) ? '': 'color_selected'}>add</span>
         <p id={(make == null) ? '': 'color_selected'}>만들기</p>
+        </Link>
+
       </div>
 
       <div className="">
