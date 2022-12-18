@@ -1,26 +1,34 @@
 import "./Index.css";
 import Calendar from "./Calendar";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import Navigation from "../../../components/Navigation/Index";
 import { Link } from "react-router-dom";
+import { findClassInfo } from "../../api/find";
+import getcookie from "../../config/cookie";
+import axios from "axios";
 
 const Calender = () => {
   const [value, onChange] = useState(new Date());
+  const [data, setData] = useState(); 
+  const [todoList, setTodoList] = useState([]);
 
-  const toDoList = [
-    {
-      id: "283o4234823798",
-      title: "영어 프린트 수행평가1",
-      from: "2022년 9월 10일",
-      to: "27일"
-    },
-    {
-      id: "283o423432423423423823798",
-      title: "영어 프린트 수행평가2",
-      from: "2022년 9월 29일",
-      to: "30일"
-    }
-  ];
+  useEffect(() => {
+    const cookie = getcookie('idClass');
+    findClassInfo(cookie).then((result)=>{
+      console.log(result.data[0].idSchool)
+      axios.get('/api/page/class?school_id=' + result.data[0].idSchool+ '&grade=' + result.data[0].grade+'&class='+result.data[0].class).then
+      ((result)=>{
+        return result.data
+
+      }).then((data)=>{
+        setTodoList(data)
+        console.log(data)
+        console.log(todoList)
+      })
+    })
+   }, [])
+
+  
 
   const ViewList = ({ info }) => {
     return (
@@ -30,9 +38,10 @@ const Calender = () => {
         </div>
         <div className="center">
           <div>
-            <p className="title">{info.title}</p>
+            <p className="title">{info.WorkPageName}</p>
             <p className="date">
-              {info.from} ~ {info.to}
+              {/* {info.from} ~ {info.to} */}
+              {info.date.toString().split('T')[0] + "까지"}
             </p>
           </div>
         </div>
@@ -49,9 +58,9 @@ const Calender = () => {
   const PrintList = () => {
     return (
       <div>
-        {toDoList.map((info) => (
-          <Link to ='/writingwork' style={{ textDecoration: 'none' }}>
-              <ViewList info={info} />
+        {todoList.map((info) => (
+          <Link to ='/writingwork' style={{ textDecoration: 'none' }} state={{'idWorkPage' : info.idWorkPage}}>
+              <ViewList info={info} key={info.idWorkPage}/>
           </Link>
         ))}
       </div>
