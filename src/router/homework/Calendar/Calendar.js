@@ -4,7 +4,55 @@ import style from "./Calendar.css";
 
 const cx = classNames.bind(style);
 
-const Calendar = () => {
+const Calendar = ({ setTodayDate }) => {
+  const data = [
+    {
+      idPosting: 14,
+      UserId: 15,
+      nickname: "fuck",
+      filePath: "src/images/0440bb48d6ba9dc1d6f25b387e1b52ec.jpeg",
+      idStudent: 1202,
+      title: "test33",
+      content: "fuck",
+      date: "2022-11-09T06:16:17.000Z",
+      liking: null
+    },
+    {
+      idPosting: 15,
+      UserId: 15,
+      nickname: "fuck",
+      filePath: "src/images/0440bb48d6ba9dc1d6f25b387e1b52ec.jpeg",
+      idStudent: 1020,
+      title: "test",
+      content: "ald",
+      date: "2022-10-16T00:46:03.000Z",
+      liking: null
+    }
+  ];
+
+  const test2 = data.map((e) => {
+    e.date = e.date.substr(0, 10);
+    e.date = new Date(e.date).toString();
+    return e;
+  });
+
+  console.log(data);
+
+  const isSameDate = (getYear, getMonth, getDay) => {
+    if (getMonth < 10) {
+      getMonth = "0" + getMonth;
+    }
+    if (getDay < 10) {
+      getDay = "0" + getDay;
+    }
+
+    const date = getYear + "-" + getMonth + "-" + getDay;
+    getDate = new Date(date).toString();
+
+    let isSelectedDate = data.some((e) => e.date === getDate);
+    return isSelectedDate;
+  };
+
   const today = {
     year: new Date().getFullYear(), //오늘 연도
     month: new Date().getMonth() + 1, //오늘 월
@@ -115,9 +163,18 @@ const Calendar = () => {
       const day = new Date(selectedYear, selectedMonth - 1, 1).getDay();
       if (week[day] === nowDay) {
         for (let i = 0; i < dateTotalCount; i++) {
+          const thisDayPlus = i + 1;
+          const thisDay =
+            selectedYear + "-" + selectedMonth + "-" + thisDayPlus;
+          console.log(data.date);
           dayArr.push(
             <div
               key={i + 1}
+              onClick={() =>
+                setTodayDate(
+                  selectedYear + "-" + selectedMonth + "-" + thisDayPlus
+                )
+              }
               className={cx(
                 {
                   //오늘 날짜일 때 표시할 스타일 클라스네임
@@ -148,7 +205,9 @@ const Calendar = () => {
               )}
             >
               {i + 1}
-              {1 === 1 ? <span className="date-bottom-dot"></span> : null}
+              {isSameDate(selectedYear, selectedMonth, thisDayPlus) ? (
+                <span className="date-bottom-dot"></span>
+              ) : null}
             </div>
           );
         }
