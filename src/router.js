@@ -32,7 +32,7 @@ const AppRouter = ({ isLoggedIn }) => {
     <BrowserRouter>
       <Routes>
         <>
-      <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<Main islogin = {isLoggedIn} />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/schoolsearching" element={<Schoolsearching />} />

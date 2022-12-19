@@ -5,19 +5,24 @@ import { Link , useNavigate} from "react-router-dom";
 import 'firebase/firestore';
 import 'firebase/auth';
 import { signInWithGoogle, auth } from '../../config/firebase_config';
+import axios from "axios";
+
 
 function GoogleSignin(props){
 
   auth.onAuthStateChanged(user => {
+    console.log('구글 로그인!')
   // user.currentUser 를 통해 현재 로그인 중인 사용자에 대한 정보를 이용할 수 있습니다.
   // ex) user.currentUser.email , user.currentUser.displayName .. etc
   
     if(user !== null){
       console.log('로그인되었습니다.');
-      props("/calendar");
+      axios.post('/api/auth/signin?uid='+ user.uid).then(
+        props("/calendar")
+      )
     }
     else{
-      signInWithGoogle().then(props("/findschool"))
+      signInWithGoogle().then(()=>{props("/findschool")})
     }
   })
 }
@@ -43,11 +48,11 @@ const Main = (props) => {
           </p>
         </div>
         <div className="bottom">
-          <button className="button-kakao" onClick={()=>GoogleSignin(navigate)}>
+          <button className="button-kakao" onClick={()=>{GoogleSignin(navigate)}}>
             <img src="img/pngwing.com.png" />
             구글로 시작하기
           </button>
-          <Link to="/signup">
+          <Link to="/login">
             <p className="another-way">다른 방법으로 시작하기</p>
           </Link>
         </div>

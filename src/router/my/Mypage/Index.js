@@ -15,7 +15,9 @@ const Mypage = () => {
     const auth = getAuth();
     
     signOut(auth).then(() => {
-      navigate('/')
+      axios.post('/api/auth/signout').then(
+        navigate('/')
+      )
       }).catch((error) => {
     });
   }
